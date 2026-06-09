@@ -178,7 +178,7 @@ python code2_alns.py
 | Medium (n=10,12) | ~7–9 s | ~75 s |
 | Large (n=15,20) | ~15–55 s | ~250 s |
 
----
+
 
 ### `code3_param_tuning.py` — Parameter Tuning
 
@@ -215,7 +215,7 @@ Total: 180 combinations × 3 instances × 5 seeds = **2,700 ALNS runs**.
 
 **Estimated runtime:** ~60–90 minutes.
 
----
+
 
 ## Instance Data Format
 
@@ -248,7 +248,7 @@ Each `instances/XXX.json` file follows this schema:
 }
 ```
 
----
+
 
 ## Shared Infrastructure
 
@@ -284,7 +284,7 @@ All 22 instances use the same physical network.
 | WW     | 1.0  |   | sW1    | 0.9  |
 |        |      |   | sW2    | 1.1  |
 
----
+
 
 ## Recommended ALNS Parameters
 
@@ -299,7 +299,7 @@ From the grid search over 180 combinations (see `code3_param_tuning.py`):
 | δ₁ / δ₂ / δ₃ | 3.0 / 2.0 / 1.0 | Reward scores (new best / improved / accepted) |
 | n_iter | 300–700 | Iterations, scaled by problem size n |
 
----
+
 
 ## Key Results Summary
 
@@ -337,7 +337,7 @@ Repair operators:
   - Regret-2: insert the part with largest (2nd_best − best) gap first
 ```
 
----
+
 
 ## File Dependencies
 
@@ -353,23 +353,4 @@ code3_param_tuning.py ── imports arp_sa_v2.py
 `arp_sa_v2.py`, `code2_alns.py`, and `code3_param_tuning.py` must be in the
 **same directory**. The `instances/` folder must be in the same directory as well.
 
----
 
-## Citation
-
-```bibtex
-@techreport{ozdemir2026arpsa,
-  author      = {Özdemir, Ayşe Melisa},
-  title       = {Assembly Routing Problem with Subcontractor Allocation
-                 in Manufacturing ({ARP-SA})},
-  institution = {Hacettepe University, Department of Industrial Engineering},
-  year        = {2026},
-  note        = {EMU676 Final Report}
-}
-```
-
----
-
-## License
-
-Developed for academic purposes — EMU676, Hacettepe University, 2025–2026.
